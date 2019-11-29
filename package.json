@@ -1,0 +1,45 @@
+{
+  "name": "twetter-project-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node index",
+    "watch": "nodemon index",
+    "dev": "export NODE_ENV=development && nodemon -x 'npm run start'",
+    "babel-node": "babel-node --presets=latest",
+    "db:migrate": "cd ./database && knex migrate:latest",
+    "db:seed": "cd ./database && knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naremanhilles/twetter-project-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naremanhilles/twetter-project-api/issues"
+  },
+  "homepage": "https://github.com/naremanhilles/twetter-project-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "bcryptjs": "^2.4.3",
+    "boom": "^7.3.0",
+    "celebrate": "^10.1.0",
+    "cookie-parser": "^1.4.4",
+    "crashpad": "^1.2.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.3",
+    "nodemailer": "^6.3.1",
+    "pg": "^7.14.0",
+    "uuid": "^3.3.3"
+  }
+}
