@@ -1,4 +1,4 @@
-const amqp =  require('amqplib');
+const amqp = require('amqplib');
 
 const { SEND_EMAIL } = require('../queues');
 
@@ -26,7 +26,7 @@ const getChannel = async (conn) => {
   }
 };
 
-dd = async () => {
+getAmqp = async () => {
   try {
     if (!connection) connection = await getConnection();
 
@@ -39,4 +39,4 @@ dd = async () => {
     return Promise.reject(err);
   }
 };
-module.exports = dd
+module.exports = getAmqp
